@@ -47,8 +47,8 @@ Monolito sencillo y organizado por módulos.
 ## 📦 Instalación
 
 ```bash
-git clone https://github.com/tu-repo/church-platform.git
-cd church-platform
+git clone https://github.com/R3lativ3/church-proyect
+cd church-proyect
 
 # Instalar dependencias
 npm install
@@ -56,5 +56,3 @@ npm install
 # Iniciar en modo desarrollo
 npm run dev
 
-# Ejecutar en modo producción
-npm start
