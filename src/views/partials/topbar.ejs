@@ -1,0 +1,23 @@
+<!-- Topbar reutilizable con toggle de sidebar y datos de usuario -->
+<header class="topbar">
+  <div class="topbar-left">
+    <button class="sidebar-toggle" aria-label="Toggle sidebar" aria-expanded="true">
+      <span class="sidebar-toggle-icon"></span>
+    </button>
+  </div>
+
+  <div class="topbar-right">
+    <div class="topbar-meta">
+      <p class="topbar-greeting">Hello! <%= userName %></p>
+      <% if (date) { %>
+        <p class="topbar-date"><%= date %></p>
+      <% } %>
+    </div>
+    <% if (role) { %>
+      <span class="topbar-badge"><%= role %></span>
+    <% } %>
+    <div class="topbar-avatar">
+      <span><%= (userName && userName.charAt(0)) || "?" %></span>
+    </div>
+  </div>
+</header>

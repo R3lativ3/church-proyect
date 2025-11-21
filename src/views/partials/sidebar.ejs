@@ -1,3 +1,4 @@
+<!-- Sidebar con navegación y botón de cierre -->
 <aside class="sidebar">
   <div class="sidebar-logo">
     <div class="logo-circle">RS</div>
@@ -5,21 +6,43 @@
       <span class="logo-title">Rapid</span>
       <span class="logo-subtitle">Sanctuary</span>
     </div>
+    <button class="sidebar-close" aria-label="Toggle sidebar"></button>
   </div>
 
   <nav class="sidebar-nav">
     <p class="sidebar-section-title">Main</p>
-    <button class="nav-item nav-item--active">Dashboard</button>
+    <a class="nav-item nav-link<%= currentPath === '/dashboard' ? ' nav-item--active' : '' %>" href="/dashboard" title="Dashboard">
+      <span class="nav-item-label">Dashboard</span>
+    </a>
+
+    <p class="sidebar-section-title">Examples</p>
+    <a class="nav-item nav-link<%= currentPath === '/example-ejs' ? ' nav-item--active' : '' %>" href="/example-ejs" title="Example EJS">
+      <span class="nav-item-label">Example EJS</span>
+    </a>
 
     <p class="sidebar-section-title">Management</p>
-    <button class="nav-item">Fellowship Management</button>
-    <button class="nav-item">Church Management</button>
-    <button class="nav-item">Event Management</button>
-    <button class="nav-item">Service Management</button>
-    <button class="nav-item">User Management</button>
-    <button class="nav-item">Role Management</button>
+    <button class="nav-item" title="Fellowship Management">
+      <span class="nav-item-label">Fellowship Management</span>
+    </button>
+    <button class="nav-item" title="Church Management">
+      <span class="nav-item-label">Church Management</span>
+    </button>
+    <button class="nav-item" title="Event Management">
+      <span class="nav-item-label">Event Management</span>
+    </button>
+    <button class="nav-item" title="Service Management">
+      <span class="nav-item-label">Service Management</span>
+    </button>
+    <button class="nav-item" title="User Management">
+      <span class="nav-item-label">User Management</span>
+    </button>
+    <button class="nav-item" title="Role Management">
+      <span class="nav-item-label">Role Management</span>
+    </button>
 
     <p class="sidebar-section-title">Reports</p>
-    <button class="nav-item">Report Generation</button>
+    <button class="nav-item" title="Report Generation">
+      <span class="nav-item-label">Report Generation</span>
+    </button>
   </nav>
 </aside>

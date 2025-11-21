@@ -1,0 +1,23 @@
+<!-- Demo sencilla de EJS reutilizando el topbar -->
+<section class="page">
+  <%- include("./topbar", {
+    userName: user.name,
+    date,
+    role: user.role
+  }) %>
+
+  <h1>Hola <%= user.name %> 👋</h1>
+  <h3>Rol: <%= user.role %></h3>
+
+  <hr />
+
+  <h2>Productos</h2>
+
+  <ul>
+    <% products.forEach(item => { %>
+      <li>
+        <strong><%= item.name %></strong> - Q.<%= item.price %>
+      </li>
+    <% }) %>
+  </ul>
+</section>

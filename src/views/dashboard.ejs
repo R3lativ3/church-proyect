@@ -1,110 +1,84 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Dashboard</title>
-  <link rel="stylesheet" href="/css/styles.css" />
-</head>
+<!-- Dashboard principal con cards y bloques de ejemplo -->
+<section class="page">
 
-<body>
-  <div class="app-container">
-    <!-- SIDEBAR -->
-    <%- include("partials/sidebar") %>
+  <!-- TOPBAR -->
+  <%- include("partials/topbar", {
+    userName: data.userName,
+    date: data.date,
+    role: data.role
+  }) %>
 
-    <!-- MAIN -->
-    <main class="main-content">
-      <section class="page">
+  <!-- CARDS -->
+  <section class="cards-row">
+    <div class="card stat-card">
+      <p class="stat-label">Total Members</p>
+      <p class="stat-value"><%= data.stats.totalMembers.toLocaleString() %></p>
+    </div>
 
-        <!-- TOPBAR -->
-        <header class="topbar">
-          <div>
-            <p class="topbar-greeting">Hello! <%= data.userName %></p>
-            <p class="topbar-date"><%= data.date %></p>
-          </div>
+    <div class="card stat-card">
+      <p class="stat-label">Total Payments</p>
+      <p class="stat-value">$<%= data.stats.totalPayments.toLocaleString() %></p>
+    </div>
 
-          <div class="topbar-right">
-            <span class="topbar-badge"><%= data.role %></span>
-            <div class="topbar-avatar">
-              <span><%= data.userName.charAt(0) %></span>
-            </div>
-          </div>
-        </header>
+    <div class="card stat-card">
+      <p class="stat-label">Total Events</p>
+      <p class="stat-value"><%= data.stats.totalEvents %></p>
+    </div>
 
-        <!-- CARDS -->
-        <section class="cards-row">
-          <div class="card stat-card">
-            <p class="stat-label">Total Members</p>
-            <p class="stat-value"><%= data.stats.totalMembers.toLocaleString() %></p>
-          </div>
+    <div class="card stat-card">
+      <p class="stat-label">Total Services</p>
+      <p class="stat-value"><%= data.stats.totalServices %></p>
+    </div>
+  </section>
 
-          <div class="card stat-card">
-            <p class="stat-label">Total Payments</p>
-            <p class="stat-value">$<%= data.stats.totalPayments.toLocaleString() %></p>
-          </div>
+  <!-- GRAFICOS DUMMY -->
+  <section class="grid-2">
+    <div class="card">
+      <div class="card-header">
+        <p class="card-title">Member Growth Past Six Months</p>
+        <span class="card-subtitle">+64.78%</span>
+      </div>
+      <div class="chart-placeholder">
+        <span>Chart placeholder</span>
+      </div>
+    </div>
 
-          <div class="card stat-card">
-            <p class="stat-label">Total Events</p>
-            <p class="stat-value"><%= data.stats.totalEvents %></p>
-          </div>
+    <div class="card">
+      <div class="card-header">
+        <p class="card-title">Gender Percentage</p>
+      </div>
+      <div class="donut-placeholder">
+        <span>Donut chart placeholder</span>
+      </div>
+    </div>
+  </section>
 
-          <div class="card stat-card">
-            <p class="stat-label">Total Services</p>
-            <p class="stat-value"><%= data.stats.totalServices %></p>
-          </div>
-        </section>
+  <!-- CALENDARIO + EVENTOS -->
+  <section class="grid-2">
+    <div class="card">
+      <div class="card-header">
+        <p class="card-title">Calendar (Dummy)</p>
+      </div>
+      <div class="calendar-placeholder">
+        <span>Calendar placeholder</span>
+      </div>
+    </div>
 
-        <!-- GRAFICOS DUMMY -->
-        <section class="grid-2">
-          <div class="card">
-            <div class="card-header">
-              <p class="card-title">Member Growth Past Six Months</p>
-              <span class="card-subtitle">+64.78%</span>
-            </div>
-            <div class="chart-placeholder">
-              <span>Chart placeholder</span>
-            </div>
-          </div>
+    <div class="card">
+      <div class="card-header">
+        <p class="card-title">Latest Events</p>
+      </div>
 
-          <div class="card">
-            <div class="card-header">
-              <p class="card-title">Gender Percentage</p>
-            </div>
-            <div class="donut-placeholder">
-              <span>Donut chart placeholder</span>
-            </div>
-          </div>
-        </section>
+      <ul class="events-list">
+        <% data.latestEvents.forEach(ev => { %>
+          <li class="event-item">
+            <p class="event-title"><%= ev.title %></p>
+            <p class="event-meta"><%= ev.date %> — <%= ev.time %></p>
+            <p class="event-church"><%= ev.church %></p>
+          </li>
+        <% }) %>
+      </ul>
+    </div>
+  </section>
 
-        <!-- CALENDARIO + EVENTOS -->
-        <section class="grid-2">
-          <div class="card">
-            <div class="card-header">
-              <p class="card-title">Calendar (Dummy)</p>
-            </div>
-            <div class="calendar-placeholder">
-              <span>Calendar placeholder</span>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-header">
-              <p class="card-title">Latest Events</p>
-            </div>
-
-            <ul class="events-list">
-              <% data.latestEvents.forEach(ev => { %>
-                <li class="event-item">
-                  <p class="event-title"><%= ev.title %></p>
-                  <p class="event-meta"><%= ev.date %> — <%= ev.time %></p>
-                  <p class="event-church"><%= ev.church %></p>
-                </li>
-              <% }) %>
-            </ul>
-          </div>
-        </section>
-
-      </section>
-    </main>
-  </div>
-</body>
-</html>
+</section>
