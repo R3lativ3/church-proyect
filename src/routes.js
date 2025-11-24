@@ -1,6 +1,7 @@
 // Rutas principales de la app (dashboard + ejemplo EJS)
 const express = require("express");
 const router = express.Router();
+const ministerios = require("./data/ministerios-iglesia.json");
 
 // Dummy data para el dashboard
 const dashboardData = {
@@ -39,13 +40,30 @@ router.get("/", (req, res) => {
   res.redirect("/dashboard");
 });
 
-router.get("/dashboard", (req, res) => {
-  // Render del dashboard principal
+// router.get("/nuevo", (req, res) => {
+// });
+
+// router.get("url", () => {
+// })
+
+// MVC
+
+// HANDLER FUNCTION
+const dashboard = (req, res) => {
+  console.log("Ministerios data:", ministerios);
+
   res.render("dashboard", {
     layout: "layout",
-    title: "Dashboard",
-    data: dashboardData
+    title: "Dashboard Hola",
+    data: dashboardData,
+    ministerios
   });
+}
+
+router.get("/dashboard", dashboard);
+
+router.get("/ministerios", (req, res) => {
+  res.json(ministerios);
 });
 
 router.get("/example-ejs", (req, res) => {
@@ -77,3 +95,9 @@ router.get("/example-ejs", (req, res) => {
 });
 
 module.exports = router;
+
+// MVC
+
+// VISTA = HTML 
+// MODELO = LA DATA EN FOLDER DATA
+// CONTROLADOR = RUTAS QUE CONECTAN LA URL Y LA VISTA CON LA DATA

@@ -16,11 +16,6 @@
     </div>
 
     <div class="card stat-card">
-      <p class="stat-label">Total Payments</p>
-      <p class="stat-value">$<%= data.stats.totalPayments.toLocaleString() %></p>
-    </div>
-
-    <div class="card stat-card">
       <p class="stat-label">Total Events</p>
       <p class="stat-value"><%= data.stats.totalEvents %></p>
     </div>
@@ -55,14 +50,17 @@
 
   <!-- CALENDARIO + EVENTOS -->
   <section class="grid-2">
-    <div class="card">
-      <div class="card-header">
-        <p class="card-title">Calendar (Dummy)</p>
+
+    <% ministerios.forEach(m => { %>
+      <div class="card" style="width: 18rem;">
+        <img src="<%= m.image %>" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><%= m.ministerio %></h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p> <!-- put description-->
+          <a href="#" class="btn btn-primary">Go somewhere</a> <!-- do nothing-->
+        </div>
       </div>
-      <div class="calendar-placeholder">
-        <span>Calendar placeholder</span>
-      </div>
-    </div>
+    <% }) %>
 
     <div class="card">
       <div class="card-header">

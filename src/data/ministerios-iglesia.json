@@ -1,0 +1,41 @@
+[
+  { "ministerio": "Intercesión", "image": "https://lacorriente.com/wp-content/uploads/2023/11/evento-cristiano.jpg", "description": "" },
+  { "ministerio": "Oración", "image": "https://example.com/oracion.jpg" },
+  { "ministerio": "Discipulado", "image": "https://example.com/discipulado.jpg" },
+  { "ministerio": "Enseñanza", "image": "https://example.com/ensenanza.jpg" },
+  { "ministerio": "Evangelismo", "image": "https://example.com/evangelismo.jpg" },
+
+  { "ministerio": "Recepción / Bienvenida", "image": "https://example.com/recepcion.jpg" },
+  { "ministerio": "Organización de Eventos", "image": "https://example.com/eventos.jpg" },
+  { "ministerio": "Control de Asistencia", "image": "https://example.com/asistencia.jpg" },
+  { "ministerio": "Inventarios", "image": "https://example.com/inventarios.jpg" },
+  { "ministerio": "Finanzas / Ofrendas", "image": "https://example.com/finanzas.jpg" },
+
+  { "ministerio": "Canto", "image": "https://example.com/canto.jpg" },
+  { "ministerio": "Músico", "image": "https://example.com/musico.jpg" },
+  { "ministerio": "Teatro", "image": "https://example.com/teatro.jpg" },
+  { "ministerio": "Danza", "image": "https://example.com/danza.jpg" },
+  { "ministerio": "Artes Visuales", "image": "https://example.com/artes.jpg" },
+
+  { "ministerio": "Sonido / Consola", "image": "https://example.com/sonido.jpg" },
+  { "ministerio": "Multimedia", "image": "https://example.com/multimedia.jpg" },
+  { "ministerio": "Streaming", "image": "https://example.com/streaming.jpg" },
+  { "ministerio": "Fotografía", "image": "https://example.com/fotografia.jpg" },
+  { "ministerio": "Video y Edición", "image": "https://example.com/video.jpg" },
+  { "ministerio": "Redes Sociales", "image": "https://example.com/redes.jpg" },
+  { "ministerio": "Diseño Gráfico", "image": "https://example.com/diseno.jpg" },
+  { "ministerio": "Página Web", "image": "https://example.com/web.jpg" },
+  { "ministerio": "Sistemas / Apps", "image": "https://example.com/sistemas.jpg" },
+  { "ministerio": "Soporte Técnico", "image": "https://example.com/soporte.jpg" },
+
+  { "ministerio": "Ujieres", "image": "https://example.com/ujieres.jpg" },
+  { "ministerio": "Limpieza y Mantenimiento", "image": "https://example.com/limpieza.jpg" },
+  { "ministerio": "Seguridad", "image": "https://example.com/seguridad.jpg" },
+  { "ministerio": "Tránsito / Estacionamiento", "image": "https://example.com/transito.jpg" },
+  { "ministerio": "Logística", "image": "https://example.com/logistica.jpg" },
+
+  { "ministerio": "Reparto de Víveres", "image": "https://example.com/viveres.jpg" },
+  { "ministerio": "Visitas a Enfermos", "image": "https://example.com/enfermos.jpg" },
+  { "ministerio": "Campañas Médicas", "image": "https://example.com/medicas.jpg" },
+  { "ministerio": "Cuidado de Niños", "image": "https://example.com/ninos.jpg" }
+]
